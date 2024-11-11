@@ -21,7 +21,7 @@ This example utilizes a fabricator to read a stream from an external command (`p
 
 ```python
 import fabric
-from fabric.utils.fabricator import Fabricator
+from fabric.core.fabricator import Fabricator
 
 # create a fabricator to continuously monitor player state using the command
 player_fabricator = Fabricator(poll_from="playerctl -F status", stream=True)
@@ -49,7 +49,7 @@ in this example, we use a fabricator to poll data from the shell command `date` 
 
 ```python
 import fabric
-from fabric.utils.fabricator import Fabricator
+from fabric.core.fabricator import Fabricator
 
 # create a fabricator to periodically retrieve the date and time
 date_fabricator = Fabricator(poll_from="date", interval=500)  # 500 milliseconds
@@ -79,7 +79,7 @@ In this example we fabricate a function instead of a shell command, and demonstr
 
 ```python
 import fabric
-from fabric.utils.fabricator import Fabricator
+from fabric.core.fabricator import Fabricator
 
 # global variable to track the counter
 number = 0
